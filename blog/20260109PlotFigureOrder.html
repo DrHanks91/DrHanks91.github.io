@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#f22" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f22" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#f22">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"drhanks91.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":-1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="将论文中绘制与插入图片流程说明如下：         绘图通用顺序   步骤1: Matlab中绘图（可省略）在matlab中绘制线图、云图、柱状图和其他数据图，完成基本绘图即可。 完成绘图后，复制图片到内存中。         Maltab绘图并复制到内存中  Matlab中示例代码如下：  12345678910111213141516171819clc;clear all;close all">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何绘制规范图片并在论文中插入">
+<meta property="og:url" content="http://drhanks91.github.io/blog/20260109PlotFigureOrder.html">
+<meta property="og:site_name" content="Dr. Hanks&#39;s Workshop">
+<meta property="og:description" content="将论文中绘制与插入图片流程说明如下：         绘图通用顺序   步骤1: Matlab中绘图（可省略）在matlab中绘制线图、云图、柱状图和其他数据图，完成基本绘图即可。 完成绘图后，复制图片到内存中。         Maltab绘图并复制到内存中  Matlab中示例代码如下：  12345678910111213141516171819clc;clear all;close all">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/DrHanks91/FileArchive/raw/main/Figures/figurePlotOrder.jpg">
+<meta property="og:image" content="https://github.com/DrHanks91/FileArchive/raw/main/Figures/copyFigureInMaltab.gif">
+<meta property="og:image" content="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustrator.gif">
+<meta property="og:image" content="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustratorHalf.gif">
+<meta property="og:image" content="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustratorFull.gif">
+<meta property="article:published_time" content="2026-01-09T09:11:04.000Z">
+<meta property="article:modified_time" content="2026-01-10T13:27:08.000Z">
+<meta property="article:author" content="王海全">
+<meta property="article:tag" content="博士">
+<meta property="article:tag" content="插图说明">
+<meta property="article:tag" content="本科">
+<meta property="article:tag" content="毕业设计">
+<meta property="article:tag" content="硕士">
+<meta property="article:tag" content="科研">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/DrHanks91/FileArchive/raw/main/Figures/figurePlotOrder.jpg">
+
+
+<link rel="canonical" href="http://drhanks91.github.io/blog/20260109PlotFigureOrder.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://drhanks91.github.io/blog/20260109PlotFigureOrder.html","path":"/blog/20260109PlotFigureOrder.html","title":"如何绘制规范图片并在论文中插入"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>如何绘制规范图片并在论文中插入 | Dr. Hanks's Workshop</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Dr. Hanks's Workshop" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Dr. Hanks's Workshop</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-主页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a></li><li class="menu-item menu-item-博士生培养"><a href="/DoctoralStudent/" rel="section"><i class="fa fa-user-md fa-fw"></i>博士生培养</a></li><li class="menu-item menu-item-硕士生培养"><a href="/MasterStudent/" rel="section"><i class="fa fa-wheelchair-alt fa-fw"></i>硕士生培养</a></li><li class="menu-item menu-item-本科生培养"><a href="/BachelorStudent/" rel="section"><i class="fa fa-wheelchair fa-fw"></i>本科生培养</a></li><li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-相关链接"><a href="/links/" rel="section"><i class="fa fa-solid fa-link fa-fw"></i>相关链接</a></li><li class="menu-item menu-item-所有博客"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>所有博客</a></li><li class="menu-item menu-item-资助说明"><a href="/Sponsor/" rel="section"><i class="fa fa-solid fa-diagram-project fa-fw"></i>资助说明</a></li><li class="menu-item menu-item-关于作者"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于作者</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A41-Matlab%E4%B8%AD%E7%BB%98%E5%9B%BE%EF%BC%88%E5%8F%AF%E7%9C%81%E7%95%A5%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">步骤1: Matlab中绘图（可省略）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A42-Illustrator%E4%B8%AD%E4%BF%AE%E6%94%B9%E4%B8%8E%E6%8E%92%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">步骤2: Illustrator中修改与排版</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%92%88%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%B1%BB%E4%BF%AE%E6%94%B9%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">针对数据类修改：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%92%88%E5%AF%B9%E5%9B%BE%E7%89%87%E7%B1%BB%E3%80%81%E7%A4%BA%E6%84%8F%E5%9B%BE%E7%B1%BB%E4%BF%AE%E6%94%B9%EF%BC%9A"><span class="nav-number">2.2.</span> <span class="nav-text">针对图片类、示意图类修改：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A43-%E6%94%BE%E5%88%B0NCWU-latex%E6%A8%A1%E7%89%88%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E5%A4%84"><span class="nav-number">3.</span> <span class="nav-text">步骤3: 放到NCWU latex模版指定位置处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A44-latex%E4%B8%AD%E6%8F%92%E5%85%A5%E4%B8%8E%E7%BC%96%E8%AF%91"><span class="nav-number">4.</span> <span class="nav-text">步骤4: latex中插入与编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A45-word%E4%B8%AD%E6%8F%92%E5%85%A5"><span class="nav-number">5.</span> <span class="nav-text">步骤5: word中插入</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">王海全</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/drhanks91" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;drhanks91" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:haiquan-wang@outlook.com" title="E-Mail → mailto:haiquan-wang@outlook.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/images/wechatQR.jpg" title="wechat → &#x2F;images&#x2F;wechatQR.jpg" rel="noopener me"><i class="fa fa-brands fa-weixin fa-fw"></i>wechat</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://drhanks91.github.io/blog/20260109PlotFigureOrder.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王海全">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dr. Hanks's Workshop">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="如何绘制规范图片并在论文中插入 | Dr. Hanks's Workshop">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何绘制规范图片并在论文中插入
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-01-09 17:11:04" itemprop="dateCreated datePublished" datetime="2026-01-09T17:11:04+08:00">2026-01-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-10 21:27:08" itemprop="dateModified" datetime="2026-01-10T21:27:08+08:00">2026-01-10</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>将论文中绘制与插入图片流程说明如下：</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/figurePlotOrder.jpg" width="800">
+</p>
+<p align="center">
+  绘图通用顺序
+</p>
+
+<h1 id="步骤1-Matlab中绘图（可省略）"><a href="#步骤1-Matlab中绘图（可省略）" class="headerlink" title="步骤1: Matlab中绘图（可省略）"></a>步骤1: Matlab中绘图（可省略）</h1><p>在matlab中绘制线图、云图、柱状图和其他数据图，完成基本绘图即可。</p>
+<p>完成绘图后，复制图片到内存中。</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/copyFigureInMaltab.gif" width="600">
+</p>
+<p align="center">
+  Maltab绘图并复制到内存中
+</p>
+Matlab中示例代码如下：
+
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">clc;clear all;close all;    <span class="comment">%% close all</span></span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">-2</span>*<span class="built_in">pi</span>,<span class="number">2</span>*<span class="built_in">pi</span>);</span><br><span class="line">y1 = <span class="built_in">sin</span>(x);</span><br><span class="line">y2 = <span class="built_in">cos</span>(x);</span><br><span class="line"></span><br><span class="line"><span class="built_in">figure</span></span><br><span class="line"><span class="built_in">plot</span>(x,y1,x,y2)</span><br><span class="line"></span><br><span class="line"><span class="comment">%%</span></span><br><span class="line">xlabel(<span class="string">&#x27;X, unit&#x27;</span>)</span><br><span class="line">ylabel(<span class="string">&#x27;Y, unit&#x27;</span>)</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">-7</span> <span class="number">7</span>])        <span class="comment">%% x range</span></span><br><span class="line">ylim([<span class="number">-1.2</span> <span class="number">1.2</span>])    <span class="comment">%% x range</span></span><br><span class="line">xticks(<span class="number">-6</span>:<span class="number">3</span>:<span class="number">6</span>)      <span class="comment">%% x ticks</span></span><br><span class="line">yticks(<span class="number">-1</span>:<span class="number">0.5</span>:<span class="number">1</span>)    <span class="comment">%% y ticks</span></span><br><span class="line"></span><br><span class="line">xtickformat(<span class="string">&#x27;%.0f&#x27;</span>)    <span class="comment">%% x ticks</span></span><br><span class="line">ytickformat(<span class="string">&#x27;%.1f&#x27;</span>)    <span class="comment">%% y ticks</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：二维图复制到内存时保存为矢量图；三维图复制到内存时改成了位图。</p>
+<h1 id="步骤2-Illustrator中修改与排版"><a href="#步骤2-Illustrator中修改与排版" class="headerlink" title="步骤2: Illustrator中修改与排版"></a>步骤2: Illustrator中修改与排版</h1><p>修改模版大小为A4。可以将此A4模版放到文件夹中，或者下载<a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/Document/ai_A4_Template.ai">此文件模版（点击）</a>。</p>
+<p>另存为文件，方便后续打开与修改。</p>
+<h2 id="针对数据类修改："><a href="#针对数据类修改：" class="headerlink" title="针对数据类修改："></a>针对数据类修改：</h2><p>空白处粘贴，并针对想要的内容做好修改，选中，导出文件到pdf。</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustrator.gif" width="800">
+</p>
+<p align="center">
+  Maltab图绘在Illustrator中修改
+</p>
+
+
+
+
+<p>如果想要保证图片为A4文字页面的一半宽。A4纸张宽210mm，如实际页面宽（字面）为180,则宽度则为90mm。</p>
+<p>可以使用Illstrator中的【Action】功能。事先录制，然后选中运行就行。如图中的action命令为【W-90】，具体执行步骤为：全选–宽度为90–字号为12–长比例为100%–宽比例为100%–再选中。同时指定的快捷键是：【Ctrl+F2】。因此可以实现，连续按多次【Ctrl+F2】可以快速调整图片格式，近似于90mm，且文字保持大小为12pt。</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustratorHalf.gif" width="800">
+</p>
+<p align="center">
+  在Illustrator中修改图片大小为90mm
+</p>
+
+<h2 id="针对图片类、示意图类修改："><a href="#针对图片类、示意图类修改：" class="headerlink" title="针对图片类、示意图类修改："></a>针对图片类、示意图类修改：</h2><p>将图片放到一个目标文件下，里面包含【.ai】文件和名为【links】的文件夹。其中，所有图片类文件均放到links下备用。此举有两个方便，一是可以方便整体拷贝，二是可以整体打包输出。</p>
+<p>此处采用多图排版，并输出为180mm宽度为例说明：</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustratorFull.gif" width="800">
+</p>
+<p align="center">
+  在Illustrator中排版多图
+</p>
+
+<h1 id="步骤3-放到NCWU-latex模版指定位置处"><a href="#步骤3-放到NCWU-latex模版指定位置处" class="headerlink" title="步骤3: 放到NCWU latex模版指定位置处"></a>步骤3: 放到NCWU latex模版指定位置处</h1><p>如pdf图片文件为：文件名.pdf，将其放到NCWU latex模版指定位置处：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--NCWU latex 模版</span><br><span class="line">    --figures</span><br><span class="line">        --chapterX  X为章节号码</span><br><span class="line">            --文件名.pdf</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="步骤4-latex中插入与编译"><a href="#步骤4-latex中插入与编译" class="headerlink" title="步骤4: latex中插入与编译"></a>步骤4: latex中插入与编译</h1><p>以图片为1.0（占整个页宽）为例，插入图片应为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\includegraphics</span>[width=1.0<span class="keyword">\textwidth</span>]&#123;figures/chapter6/文件名.pdf&#125;</span><br></pre></td></tr></table></figure>
+<p>以图片为0.5（占半个页宽）为例，插入图片应为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>]&#123;figures/chapter6/文件名.pdf&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体使用方法可以参考<a href="https://drhanks91.github.io/2025/12/26/%E6%AF%95%E8%AE%BE%E5%86%99%E4%BD%9C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">华北水利水电大学本科毕设latex模版</a>。</p>
+<h1 id="步骤5-word中插入"><a href="#步骤5-word中插入" class="headerlink" title="步骤5: word中插入"></a>步骤5: word中插入</h1><p>如果使用word模版，在第3步时，可以导出为bmp格式，或者jpg格式。</p>
+<p>直接插入到word中即可。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>在此承诺，所有的打赏与资助均用于实验室建设与学生培养。</div>
+  <button>
+    赞赏/资助
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="王海全 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="王海全 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%AC%E7%A7%91/" rel="tag"># 本科</a>
+              <a href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" rel="tag"># 毕业设计</a>
+              <a href="/tags/%E7%A1%95%E5%A3%AB/" rel="tag"># 硕士</a>
+              <a href="/tags/%E5%8D%9A%E5%A3%AB/" rel="tag"># 博士</a>
+              <a href="/tags/%E7%A7%91%E7%A0%94/" rel="tag"># 科研</a>
+              <a href="/tags/%E6%8F%92%E5%9B%BE%E8%AF%B4%E6%98%8E/" rel="tag"># 插图说明</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/blog/20260104TranslatedPaper.html" rel="prev" title="本科毕业设计（论文）论文翻译说明">
+                  <i class="fa fa-angle-left"></i> 本科毕业设计（论文）论文翻译说明
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/blog/20260110TranslatedPaperCheck.html" rel="next" title="英文译文自查清单">
+                  英文译文自查清单 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">王海全</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
