@@ -167,7 +167,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -201,6 +201,140 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://drhanks91.github.io/blog/20260109PlotFigureOrder.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王海全">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dr. Hanks's Workshop">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Dr. Hanks's Workshop">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/blog/20260109PlotFigureOrder.html" class="post-title-link" itemprop="url">如何绘制规范图片并在论文中插入</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-01-09 17:11:04" itemprop="dateCreated datePublished" datetime="2026-01-09T17:11:04+08:00">2026-01-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-10 21:27:08" itemprop="dateModified" datetime="2026-01-10T21:27:08+08:00">2026-01-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>将论文中绘制与插入图片流程说明如下：</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/figurePlotOrder.jpg" width="800">
+</p>
+<p align="center">
+  绘图通用顺序
+</p>
+<h1>步骤1: Matlab中绘图（可省略）</h1>
+<p>在matlab中绘制线图、云图、柱状图和其他数据图，完成基本绘图即可。</p>
+<p>完成绘图后，复制图片到内存中。</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/copyFigureInMaltab.gif" width="600">
+</p>
+<p align="center">
+  Maltab绘图并复制到内存中
+</p>
+Matlab中示例代码如下：
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">clc;clear all;close all;    <span class="comment">%% close all</span></span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">-2</span>*<span class="built_in">pi</span>,<span class="number">2</span>*<span class="built_in">pi</span>);</span><br><span class="line">y1 = <span class="built_in">sin</span>(x);</span><br><span class="line">y2 = <span class="built_in">cos</span>(x);</span><br><span class="line"></span><br><span class="line"><span class="built_in">figure</span></span><br><span class="line"><span class="built_in">plot</span>(x,y1,x,y2)</span><br><span class="line"></span><br><span class="line"><span class="comment">%%</span></span><br><span class="line">xlabel(<span class="string">&#x27;X, unit&#x27;</span>)</span><br><span class="line">ylabel(<span class="string">&#x27;Y, unit&#x27;</span>)</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">-7</span> <span class="number">7</span>])        <span class="comment">%% x range</span></span><br><span class="line">ylim([<span class="number">-1.2</span> <span class="number">1.2</span>])    <span class="comment">%% x range</span></span><br><span class="line">xticks(<span class="number">-6</span>:<span class="number">3</span>:<span class="number">6</span>)      <span class="comment">%% x ticks</span></span><br><span class="line">yticks(<span class="number">-1</span>:<span class="number">0.5</span>:<span class="number">1</span>)    <span class="comment">%% y ticks</span></span><br><span class="line"></span><br><span class="line">xtickformat(<span class="string">&#x27;%.0f&#x27;</span>)    <span class="comment">%% x ticks</span></span><br><span class="line">ytickformat(<span class="string">&#x27;%.1f&#x27;</span>)    <span class="comment">%% y ticks</span></span><br></pre></td></tr></table></figure>
+<p>注意：二维图复制到内存时保存为矢量图；三维图复制到内存时改成了位图。</p>
+<h1>步骤2: Illustrator中修改与排版</h1>
+<p>修改模版大小为A4。可以将此A4模版放到文件夹中，或者下载<a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/Document/ai_A4_Template.ai">此文件模版（点击）</a>。</p>
+<p>另存为文件，方便后续打开与修改。</p>
+<h2 id="针对数据类修改：">针对数据类修改：</h2>
+<p>空白处粘贴，并针对想要的内容做好修改，选中，导出文件到pdf。</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustrator.gif" width="800">
+</p>
+<p align="center">
+  Maltab图绘在Illustrator中修改
+</p>
+<p>如果想要保证图片为A4文字页面的一半宽。A4纸张宽210mm，如实际页面宽（字面）为180,则宽度则为90mm。</p>
+<p>可以使用Illstrator中的【Action】功能。事先录制，然后选中运行就行。如图中的action命令为【W-90】，具体执行步骤为：全选–宽度为90–字号为12–长比例为100%–宽比例为100%–再选中。同时指定的快捷键是：【Ctrl+F2】。因此可以实现，连续按多次【Ctrl+F2】可以快速调整图片格式，近似于90mm，且文字保持大小为12pt。</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustratorHalf.gif" width="800">
+</p>
+<p align="center">
+  在Illustrator中修改图片大小为90mm
+</p>
+<h2 id="针对图片类、示意图类修改：">针对图片类、示意图类修改：</h2>
+<p>将图片放到一个目标文件下，里面包含【.ai】文件和名为【links】的文件夹。其中，所有图片类文件均放到links下备用。此举有两个方便，一是可以方便整体拷贝，二是可以整体打包输出。</p>
+<p>此处采用多图排版，并输出为180mm宽度为例说明：</p>
+<p align="center">
+  <img src="https://github.com/DrHanks91/FileArchive/raw/main/Figures/ModifyFigureInIllustratorFull.gif" width="800">
+</p>
+<p align="center">
+  在Illustrator中排版多图
+</p>
+<h1>步骤3: 放到NCWU latex模版指定位置处</h1>
+<p>如pdf图片文件为：文件名.pdf，将其放到NCWU latex模版指定位置处：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--NCWU latex 模版</span><br><span class="line">    --figures</span><br><span class="line">        --chapterX  X为章节号码</span><br><span class="line">            --文件名.pdf</span><br></pre></td></tr></table></figure>
+<h1>步骤4: latex中插入与编译</h1>
+<p>以图片为1.0（占整个页宽）为例，插入图片应为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\includegraphics</span>[width=1.0<span class="keyword">\textwidth</span>]&#123;figures/chapter6/文件名.pdf&#125;</span><br></pre></td></tr></table></figure>
+<p>以图片为0.5（占半个页宽）为例，插入图片应为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>]&#123;figures/chapter6/文件名.pdf&#125;</span><br></pre></td></tr></table></figure>
+<p>具体使用方法可以参考<a href="https://drhanks91.github.io/2025/12/26/%E6%AF%95%E8%AE%BE%E5%86%99%E4%BD%9C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">华北水利水电大学本科毕设latex模版</a>。</p>
+<h1>步骤5: word中插入</h1>
+<p>如果使用word模版，在第3步时，可以导出为bmp格式，或者jpg格式。</p>
+<p>直接插入到word中即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -261,15 +395,19 @@
     <div class="post-body" itemprop="articleBody">
           <p>请同学们端正态度，仔细阅读相关文件（自己翻看以往记录）：</p>
 <blockquote>
-<p>附  录<br>附录包含外文原文（近5年与毕业设计（论文）题目相关的期刊论文）、外文译文（不少于<strong>2000字</strong>）、任务书、开题报告、设计书、图表、程序等（附录部分装订顺序按照此顺序进行）。<br>本部分要求双面打印。</p>
+<p>附  录<br>
+附录包含外文原文（近5年与毕业设计（论文）题目相关的期刊论文）、外文译文（不少于<strong>2000字</strong>）、任务书、开题报告、设计书、图表、程序等（附录部分装订顺序按照此顺序进行）。<br>
+本部分要求双面打印。</p>
 </blockquote>
-<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><ol>
+<h1>说明</h1>
+<ol>
 <li>与毕设内容无关的，不翻译；</li>
 <li>超过5年的，不翻译；</li>
 <li>不过2000字，不翻译；</li>
 <li>从下载Paper，在word中翻译原文，合并成一个pdf文件，上传格子达。</li>
 </ol>
-<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p><a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/Document/%E5%8D%8E%E5%8C%97%E6%B0%B4%E5%88%A9%E6%B0%B4%E7%94%B5%E5%A4%A7%E5%AD%A6%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%EF%BC%88%E8%AE%BA%E6%96%87%EF%BC%89%E6%A0%BC%E5%BC%8F%E5%92%8C%E8%A6%81%E6%B1%82.doc">华北水利水电大学毕业设计（论文）格式和要求.doc</a></p>
+<h1>参考文档</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/Document/%E5%8D%8E%E5%8C%97%E6%B0%B4%E5%88%A9%E6%B0%B4%E7%94%B5%E5%A4%A7%E5%AD%A6%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%EF%BC%88%E8%AE%BA%E6%96%87%EF%BC%89%E6%A0%BC%E5%BC%8F%E5%92%8C%E8%A6%81%E6%B1%82.doc">华北水利水电大学毕业设计（论文）格式和要求.doc</a></p>
 
       
     </div>
@@ -340,15 +478,18 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>请各位同学使用以下模版作为毕业设计（论文）使用模版:</p>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/SlideTemplate/NCWU_BachelorReport.pptx">下载-华北水利水电大学本科毕业设计（论文）答辩PPT模版</a></p>
-<p>如果没有下载，可以【点击上方链接】—- 点击【三个点】—【下载文件】。</p>
-<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p><a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/SlideTemplate/PPTSlideIllustrator.gif">点击查看使用说明</a></p>
+<h1>下载</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/SlideTemplate/NCWU_BachelorReport.pptx">下载-华北水利水电大学本科毕业设计（论文）答辩PPT模版</a></p>
+<p>如果没有下载，可以【点击上方链接】---- 点击【三个点】—【下载文件】。</p>
+<h1>使用说明</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/DrHanks91/FileArchive/blob/main/SlideTemplate/PPTSlideIllustrator.gif">点击查看使用说明</a></p>
 <ol>
 <li>修改封皮页和尾页具体内容；</li>
 <li>插入目录页：左侧大纲处–右键插入空白页–在生成空白页处右键，应用–选择模版中的目录页；</li>
 <li>插入子标题页：左侧大纲处–右键插入空白页–在生成空白页处右键，应用–选择模版中的子标题页。</li>
 </ol>
-<h1 id="检查说明"><a href="#检查说明" class="headerlink" title="检查说明"></a>检查说明</h1><p>播放Slides，检查是否有漏写错误。</p>
+<h1>检查说明</h1>
+<p>播放Slides，检查是否有漏写错误。</p>
 <p>提交Slides之前，检查是否有内容错误。</p>
 
       
@@ -426,22 +567,22 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>对于毕设LaTex模版作出以下更改：</p>
-<h1 id="更改1-章节首页没有页眉的问题"><a href="#更改1-章节首页没有页眉的问题" class="headerlink" title="更改1: 章节首页没有页眉的问题"></a>更改1: 章节首页没有页眉的问题</h1><h2 id="修改preamble-tex文件"><a href="#修改preamble-tex文件" class="headerlink" title="修改preamble.tex文件"></a>修改preamble.tex文件</h2><p>对<strong>fancyhdr</strong>宏包的定义作出修改。</p>
+<h1>更改1: 章节首页没有页眉的问题</h1>
+<h2 id="修改preamble-tex文件">修改preamble.tex文件</h2>
+<p>对<strong>fancyhdr</strong>宏包的定义作出修改。</p>
 <p>修改前（只修改此模块，其他勿动）：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%----------------------------\usepackage&#123;fancyhdr&#125;</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;fancyhdr&#125;</span><br><span class="line"><span class="keyword">\pagestyle</span>&#123;fancy&#125;</span><br><span class="line"><span class="keyword">\fancyhf</span>&#123;&#125;</span><br><span class="line"><span class="keyword">\fancyhead</span>[C]&#123;<span class="keyword">\songti</span><span class="keyword">\zihao</span>&#123;-5&#125; <span class="keyword">\headTitle</span>&#125;</span><br><span class="line"><span class="keyword">\fancyfoot</span>[C]&#123;<span class="keyword">\thepage</span>&#125;</span><br><span class="line"><span class="comment">% 设置页眉下划线宽度，例如0.4pt</span></span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\headrulewidth</span>&#125;&#123;0.4pt&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\footrulewidth</span>&#125;&#123;0pt&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 关键新增：重定义plain样式（章节首页默认样式），使其与fancy样式一致</span></span><br><span class="line"><span class="keyword">\fancypagestyle</span>&#123;plain&#125;&#123;</span><br><span class="line">	<span class="keyword">\fancyhf</span>&#123;&#125;  <span class="comment">% 清空原有页眉页脚</span></span><br><span class="line">	<span class="keyword">\fancyfoot</span>[C]&#123;<span class="keyword">\thepage</span>&#125;  <span class="comment">% 仅保留页脚页码，移除页眉</span></span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\headrulewidth</span>&#125;&#123;0pt&#125;  <span class="comment">% 页眉线也移除</span></span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\footrulewidth</span>&#125;&#123;0pt&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">%----------------------------\usepackage&#123;fancyhdr&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>修改后（只修改此模块，其他勿动）：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%----------------------------\usepackage&#123;fancyhdr&#125;</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;fancyhdr&#125;</span><br><span class="line"><span class="keyword">\pagestyle</span>&#123;fancy&#125;</span><br><span class="line"><span class="keyword">\fancyhf</span>&#123;&#125;</span><br><span class="line"><span class="keyword">\fancyhead</span>[C]&#123;<span class="keyword">\songti</span><span class="keyword">\zihao</span>&#123;-5&#125; <span class="keyword">\headTitle</span>&#125;</span><br><span class="line"><span class="keyword">\fancyfoot</span>[C]&#123;<span class="keyword">\thepage</span>&#125;</span><br><span class="line"><span class="comment">% 设置页眉下划线宽度，例如0.4pt</span></span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\headrulewidth</span>&#125;&#123;0.4pt&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\footrulewidth</span>&#125;&#123;0pt&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 关键新增：重定义plain样式（章节首页默认样式），使其与fancy样式一致</span></span><br><span class="line"><span class="keyword">\fancypagestyle</span>&#123;plain&#125;&#123;</span><br><span class="line">	<span class="keyword">\fancyhf</span>&#123;&#125;  <span class="comment">% 清空原有页眉页脚</span></span><br><span class="line">	<span class="keyword">\fancyhead</span>[C]&#123;<span class="keyword">\songti</span><span class="keyword">\zihao</span>&#123;-5&#125; <span class="keyword">\headTitle</span>&#125;	<span class="comment">%同时显示章节首页页眉</span></span><br><span class="line">	<span class="keyword">\fancyfoot</span>[C]&#123;<span class="keyword">\thepage</span>&#125;</span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\headrulewidth</span>&#125;&#123;0.4pt&#125;</span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\footrulewidth</span>&#125;&#123;0pt&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">%----------------------------\usepackage&#123;fancyhdr&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="修改chapter-1-tex文件"><a href="#修改chapter-1-tex文件" class="headerlink" title="修改chapter_1.tex文件"></a>修改chapter_1.tex文件</h2><p>删除首行，修改前（展示部分代码）：</p>
+<h2 id="修改chapter-1-tex文件">修改chapter_1.tex文件</h2>
+<p>删除首行，修改前（展示部分代码）：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\pagestyle</span>&#123;fancy&#125;</span><br><span class="line"><span class="keyword">\chapter</span>&#123;引言&#125;</span><br><span class="line"><span class="keyword">\section</span>&#123;背景介绍&#125;</span><br></pre></td></tr></table></figure>
-
 <p>修改后（删除首行）：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\chapter</span>&#123;引言&#125;</span><br><span class="line"><span class="keyword">\section</span>&#123;背景介绍&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="更改2-对注释错误进行更改"><a href="#更改2-对注释错误进行更改" class="headerlink" title="更改2: 对注释错误进行更改"></a>更改2: 对注释错误进行更改</h1><p>在preamble中，对参考文献的修改中注释错误。<br>修改前（展示部分代码）：</p>
+<h1>更改2: 对注释错误进行更改</h1>
+<p>在preamble中，对参考文献的修改中注释错误。<br>
+修改前（展示部分代码）：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorting=none,         <span class="comment">% 按姓名、标题、年份排序</span></span><br></pre></td></tr></table></figure>
-
 <p>修改后（删除首行）：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorting=none,         <span class="comment">% 按正文中引用顺序排序</span></span><br></pre></td></tr></table></figure>
       
@@ -519,30 +660,38 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>以下选一个方案：如有硕博意向的同学，推荐使用方案一。如直接毕业的同学，请使用方案二。</p>
-<h1 id="方案一：Latex-篇-（TexLive-TexStudio-Jabref）"><a href="#方案一：Latex-篇-（TexLive-TexStudio-Jabref）" class="headerlink" title="方案一：Latex 篇 （TexLive + TexStudio + Jabref）"></a>方案一：Latex 篇 （TexLive + TexStudio + Jabref）</h1><h2 id="步骤1-安装Texlive-TexStudio（以下任一）"><a href="#步骤1-安装Texlive-TexStudio（以下任一）" class="headerlink" title="步骤1: 安装Texlive + TexStudio（以下任一）"></a>步骤1: 安装Texlive + TexStudio（以下任一）</h2><p>Texlive.iso 安装包比较大，网络不好的同学可以找小组长拷贝。U盘需要有10G左右的内存。</p>
+<h1>方案一：Latex 篇 （TexLive + TexStudio + Jabref）</h1>
+<h2 id="步骤1-安装Texlive-TexStudio（以下任一）">步骤1: 安装Texlive + TexStudio（以下任一）</h2>
+<p>Texlive.iso 安装包比较大，网络不好的同学可以找小组长拷贝。U盘需要有10G左右的内存。</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44807931/article/details/145368442">2025最新TexLive+TexStudio完整安装与使用教程</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/1921310237857648721">2025 最新LaTeX【texlive+TeXstudio】安装保姆教程</a></li>
 <li><a target="_blank" rel="noopener" href="https://comate.baidu.com/zh/page/8tk70692bec">LaTeX环境搭建指南：TeX Live与TeXstudio安装全流程</a></li>
 </ol>
-<h2 id="步骤2-安装JabRef（以下任一）"><a href="#步骤2-安装JabRef（以下任一）" class="headerlink" title="步骤2: 安装JabRef（以下任一）"></a>步骤2: 安装JabRef（以下任一）</h2><ol>
+<h2 id="步骤2-安装JabRef（以下任一）">步骤2: 安装JabRef（以下任一）</h2>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://docs.jabref.org/installation">Install</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_36464343/article/details/153874099">JabRef Windows版4.3.1文献管理工具实战应用</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jR4y1t7tE/?vd_source=cfd6e27f8c14e6094c8c84163b73c627">【LaTeX】7. jabref的安装</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/qixianyu/p/6657363.html">Jabref安装及使用教程</a></li>
 </ol>
-<h2 id="步骤3-下载华北水利水电大学毕设模版"><a href="#步骤3-下载华北水利水电大学毕设模版" class="headerlink" title="步骤3: 下载华北水利水电大学毕设模版"></a>步骤3: 下载华北水利水电大学毕设模版</h2><ol>
+<h2 id="步骤3-下载华北水利水电大学毕设模版">步骤3: 下载华北水利水电大学毕设模版</h2>
+<ol>
 <li>现场拷贝。</li>
 <li><a target="_blank" rel="noopener" href="https://github.com/DrHanks91/NCWU_bachelorThesis_Latex">华北水利水电大学本科毕设Latex模版</a>。进入网址–点击Code–下载Zip–解压待使用。</li>
 </ol>
-<h1 id="方案二：Word-篇-（Word-Mathtype-Endnote）"><a href="#方案二：Word-篇-（Word-Mathtype-Endnote）" class="headerlink" title="方案二：Word 篇 （Word + Mathtype + Endnote）"></a>方案二：Word 篇 （Word + Mathtype + Endnote）</h1><h2 id="步骤1-安装Word"><a href="#步骤1-安装Word" class="headerlink" title="步骤1: 安装Word"></a>步骤1: 安装Word</h2><p>  此步跳过。</p>
-<h2 id="步骤2-安装Mathtype（以下任一）"><a href="#步骤2-安装Mathtype（以下任一）" class="headerlink" title="步骤2: 安装Mathtype（以下任一）"></a>步骤2: 安装Mathtype（以下任一）</h2><ol>
+<h1>方案二：Word 篇 （Word + Mathtype + Endnote）</h1>
+<h2 id="步骤1-安装Word">步骤1: 安装Word</h2>
+<p>此步跳过。</p>
+<h2 id="步骤2-安装Mathtype（以下任一）">步骤2: 安装Mathtype（以下任一）</h2>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/thundergrj/article/details/139620964">Mathtype安装过程及基本使用方法</a></li>
 <li><a target="_blank" rel="noopener" href="https://hackmd.io/@dal/worduse">Mathtype</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28059053153">学术干货：2025最新MathType超详细保姆级教程，轻松编写好看优雅的SCI科研公式</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.douban.com/note/862298649/?_i=67123423prY_Bc">2024 手把手教你MathType 7.8中文破解版详细安装激活图文教程</a></li>
 </ol>
-<h2 id="步骤3-安装Endnote-X9（以下任一）"><a href="#步骤3-安装Endnote-X9（以下任一）" class="headerlink" title="步骤3: 安装Endnote X9（以下任一）"></a>步骤3: 安装Endnote X9（以下任一）</h2><ol>
+<h2 id="步骤3-安装Endnote-X9（以下任一）">步骤3: 安装Endnote X9（以下任一）</h2>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Zlzxzw/article/details/144947495">Endnote 安装</a></li>
 <li><a target="_blank" rel="noopener" href="http://www.guzjlab.org/endnotex9.html">EndNote X9</a></li>
 <li><a target="_blank" rel="noopener" href="https://wdcsci.com/news/detail/113">EndNote X9.2大客户免费版，支持Windows和mac系统，附汉化版</a></li>
@@ -623,68 +772,82 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="学生基本信息"><a href="#学生基本信息" class="headerlink" title="学生基本信息"></a>学生基本信息</h1><p>此处省略。</p>
-<h1 id="毕业设计要求与规范"><a href="#毕业设计要求与规范" class="headerlink" title="毕业设计要求与规范"></a>毕业设计要求与规范</h1><p>下载<a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1_%E8%AE%BA%E6%96%87%E7%AE%A1%E7%90%86%E5%8A%9E%E6%B3%95.pdf">华北水利水电大学全日制本科生毕业设计（论文）管理办法</a>，此文件仅供参考，以官方文档和学校通知为准。</p>
-<h2 id="撰写规范"><a href="#撰写规范" class="headerlink" title="撰写规范"></a>撰写规范</h2><p><a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%EF%BC%88%E8%AE%BA%E6%96%87%EF%BC%89%E6%A0%BC%E5%BC%8F%E5%92%8C%E8%A6%81%E6%B1%82.doc">华北水利水电大学大学格式要求</a>，此文件仅供参考，以官方文档和学校通知为准。</p>
-<h1 id="关键时节节点"><a href="#关键时节节点" class="headerlink" title="关键时节节点"></a>关键时节节点</h1><h1 id="完成选题"><a href="#完成选题" class="headerlink" title="完成选题"></a>完成选题</h1><p>2025-12-12号前，在<a target="_blank" rel="noopener" href="https://co.gocheck.cn/">格子达</a>中完成填报。</p>
+          <h1>学生基本信息</h1>
+<p>此处省略。</p>
+<h1>毕业设计要求与规范</h1>
+<p>下载<a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1_%E8%AE%BA%E6%96%87%E7%AE%A1%E7%90%86%E5%8A%9E%E6%B3%95.pdf">华北水利水电大学全日制本科生毕业设计（论文）管理办法</a>，此文件仅供参考，以官方文档和学校通知为准。</p>
+<h2 id="撰写规范">撰写规范</h2>
+<p><a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%EF%BC%88%E8%AE%BA%E6%96%87%EF%BC%89%E6%A0%BC%E5%BC%8F%E5%92%8C%E8%A6%81%E6%B1%82.doc">华北水利水电大学大学格式要求</a>，此文件仅供参考，以官方文档和学校通知为准。</p>
+<h1>关键时节节点</h1>
+<h1>完成选题</h1>
+<p>2025-12-12号前，在<a target="_blank" rel="noopener" href="https://co.gocheck.cn/">格子达</a>中完成填报。</p>
 <table>
 <thead>
 <tr>
-<th align="center">时间节点</th>
-<th align="center">具体工作</th>
-<th align="center">目前位置</th>
+<th style="text-align:center">时间节点</th>
+<th style="text-align:center">具体工作</th>
+<th style="text-align:center">目前位置</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">2025年11月20日前(第13周)</td>
-<td align="center">完成系统信息审核，学生账号激活工作</td>
-<td align="center">完成</td>
+<tbody>
+<tr>
+<td style="text-align:center">2025年11月20日前(第13周)</td>
+<td style="text-align:center">完成系统信息审核，学生账号激活工作</td>
+<td style="text-align:center">完成</td>
 </tr>
 <tr>
-<td align="center">2025年11月28日前(第14周)</td>
-<td align="center">各学院组织完成选题发布工作</td>
-<td align="center">完成</td>
+<td style="text-align:center">2025年11月28日前(第14周)</td>
+<td style="text-align:center">各学院组织完成选题发布工作</td>
+<td style="text-align:center">完成</td>
 </tr>
 <tr>
-<td align="center">2025年12月12日前(第16周)</td>
-<td align="center">各学院组织学生完成选题工作</td>
-<td align="center">完成</td>
+<td style="text-align:center">2025年12月12日前(第16周)</td>
+<td style="text-align:center">各学院组织学生完成选题工作</td>
+<td style="text-align:center">完成</td>
 </tr>
 <tr>
-<td align="center">2025年12月19日前(第17周)</td>
-<td align="center">各学院组织教师下达任务书</td>
-<td align="center">完成</td>
+<td style="text-align:center">2025年12月19日前(第17周)</td>
+<td style="text-align:center">各学院组织教师下达任务书</td>
+<td style="text-align:center">完成</td>
 </tr>
 <tr>
-<td align="center">2026年1月9日前(第21周)</td>
-<td align="center">各学院组织完成开题工作</td>
-<td align="center">完成</td>
+<td style="text-align:center">2026年1月9日前(第21周)</td>
+<td style="text-align:center">各学院组织完成开题工作</td>
+<td style="text-align:center">完成</td>
 </tr>
 <tr>
-<td align="center">2026年4月15日前(第7周)</td>
-<td align="center">各学院组织完成中期检查工作</td>
-<td align="center"><strong>进行中</strong></td>
+<td style="text-align:center">2026年4月15日前(第7周)</td>
+<td style="text-align:center">各学院组织完成中期检查工作</td>
+<td style="text-align:center"><strong>进行中</strong></td>
 </tr>
 <tr>
-<td align="center">2026年6月5日前(第14周)</td>
-<td align="center">各学院组织评阅及答辩工作</td>
-<td align="center"></td>
+<td style="text-align:center">2026年6月5日前(第14周)</td>
+<td style="text-align:center">各学院组织评阅及答辩工作</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">2026年6月5日</td>
-<td align="center">录入毕业设计(论文)成绩</td>
-<td align="center"></td>
+<td style="text-align:center">2026年6月5日</td>
+<td style="text-align:center">录入毕业设计(论文)成绩</td>
+<td style="text-align:center"></td>
 </tr>
-</tbody></table>
-<h1 id="工具篇"><a href="#工具篇" class="headerlink" title="工具篇"></a>工具篇</h1><h2 id="撰写方式一"><a href="#撰写方式一" class="headerlink" title="撰写方式一"></a>撰写方式一</h2><ol>
+</tbody>
+</table>
+<h1>工具篇</h1>
+<h2 id="撰写方式一">撰写方式一</h2>
+<ol>
 <li>Word+Endnote （推荐普通学生使用，说明与使用教程等待更新。）</li>
 </ol>
-<h2 id="撰写方式二"><a href="#撰写方式二" class="headerlink" title="撰写方式二"></a>撰写方式二</h2><ol>
+<h2 id="撰写方式二">撰写方式二</h2>
+<ol>
 <li>LaTex+Jabref （推荐有志于硕博的学生使用，说明与使用教程等待更新。）</li>
 </ol>
-<h2 id="插图软件"><a href="#插图软件" class="headerlink" title="插图软件"></a>插图软件</h2><p>Adobe Illustrator<a target="_blank" rel="noopener" href="https://www.adobe.com/products/illustrator.html">官网</a><br>安装版本：adobe illustrator 2023, 27.3.1</p>
-<h2 id="CAD制图软件"><a href="#CAD制图软件" class="headerlink" title="CAD制图软件"></a>CAD制图软件</h2><p>AutoCAD Mechanical 2020 （注意是机械版本）</p>
-<h2 id="GPT等生成文本"><a href="#GPT等生成文本" class="headerlink" title="GPT等生成文本"></a>GPT等生成文本</h2><p>请仅用此类软件提供错误修改、句子润色等无关作弊、抄袭等写作规范问题场合使用。</p>
+<h2 id="插图软件">插图软件</h2>
+<p>Adobe Illustrator<a target="_blank" rel="noopener" href="https://www.adobe.com/products/illustrator.html">官网</a><br>
+安装版本：adobe illustrator 2023, 27.3.1</p>
+<h2 id="CAD制图软件">CAD制图软件</h2>
+<p>AutoCAD Mechanical 2020 （注意是机械版本）</p>
+<h2 id="GPT等生成文本">GPT等生成文本</h2>
+<p>请仅用此类软件提供错误修改、句子润色等无关作弊、抄袭等写作规范问题场合使用。</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://claude.ai/recents">Claude</a></li>
 <li><a target="_blank" rel="noopener" href="https://chatgpt.com/">ChatGPT</a></li>
@@ -693,9 +856,10 @@
 <li><a target="_blank" rel="noopener" href="https://chatlyai.app/">Gemini</a></li>
 <li>其他等。</li>
 </ol>
-<h2 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h2><ol>
+<h2 id="搜索引擎">搜索引擎</h2>
+<ol>
 <li>中文：百度、<a target="_blank" rel="noopener" href="https://www.bing.com/?mkt=zh-CN">Bing</a></li>
-<li>英文：<a target="_blank" rel="noopener" href="https://www.google.com/">Google</a>、<a target="_blank" rel="noopener" href="https://www.bing.com/">Bing</a></li>
+<li>英文：<a target="_blank" rel="noopener" href="https://www.google.com/">Google</a>、<a target="_blank" rel="noopener" href="https://www.bing.com">Bing</a></li>
 </ol>
 
       
