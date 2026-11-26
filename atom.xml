@@ -9,7 +9,29 @@
   <link href="http://drhanks91.github.io/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, 王海全</rights>
   <title>Dr. Hanks's Workshop</title>
-  <updated>2026-11-25T11:22:49.045Z</updated>
+  <updated>2026-11-26T02:54:33.333Z</updated>
+  <entry>
+    <author>
+      <name>王海全</name>
+    </author>
+    <category term="本科" scheme="http://drhanks91.github.io/tags/%E6%9C%AC%E7%A7%91/"/>
+    <category term="毕业设计" scheme="http://drhanks91.github.io/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    <content>
+      <![CDATA[<h1>总体通知</h1><ol><li><a href="https://www2.ncwu.edu.cn/jiaowu/info/1008/3014.htm">关于做好2027届本科毕业设计（论文）工作的通知</a></li></ol><h1>2027届本科毕业设计（论文）工作进度安排</h1><table><thead><tr><th>时间节点</th><th>具体工作</th></tr></thead><tbody><tr><td>2026年11月16日前（第12周）</td><td>完成系统信息审核，做好准备工作</td></tr><tr><td>2026年11月27日前（第13周）</td><td>组织选题遴选、发布</td></tr><tr><td>2026年12月11日前（第15周）</td><td>组织完成选题</td></tr><tr><td>2026年12月18日前（第16周）</td><td>组织教师下达任务书</td></tr><tr><td>2027年1月8日前（第19周）</td><td>组织完成开题答辩、确认开题报告</td></tr><tr><td>2027年3月31日前（第6周）</td><td>组织完成中期答辩等相关检查</td></tr><tr><td>2027年5月28日前（第14周）</td><td>完成交叉评阅、检测、答辩及外审</td></tr><tr><td>2027年5月28日</td><td>录入毕业设计（论文）成绩</td></tr></tbody></table><center>  <font size="5">    <a>      <b>最新通知</b>    </a>  </font></center><h1>最新通知-工具篇</h1><h2 id="基本书写软件">基本书写软件</h2><ol><li>Word+Endnote</li></ol><blockquote><p>书写软件：Word，使用微软的Word软件，<s>不要使用WPS版本的office</s></p><p>文献管理软件：Endnote，使用x9版本（可搜索关键词下载：endnote x9 中科院 大客户版本），<s>不要使用20以上版本</s></p></blockquote><h2 id="绘制插图软件">绘制插图软件</h2><ol><li>Adobe Illustrator</li></ol><blockquote><p>安装版本：adobe illustrator 2022， 26.1版本，（请自行搜索安装下载）</p></blockquote><h2 id="CAD制图软件">CAD制图软件</h2><ol><li>AutoCAD Mechanical 2022</li></ol><blockquote><p>（注意是机械版本，带Mechanical）</p></blockquote><h2 id="报告软件">报告软件</h2><ol><li>PPT</li></ol><blockquote><p>使用微软的PPT软件，<s>不要使用WPS版本的office</s></p></blockquote>]]>
+    </content>
+    <id>http://drhanks91.github.io/blog/20261126BachelorOfYear27Plan.html</id>
+    <link href="http://drhanks91.github.io/blog/20261126BachelorOfYear27Plan.html"/>
+    <published>2026-11-26T02:20:43.000Z</published>
+    <summary>
+      <![CDATA[<h1>总体通知</h1>
+<ol>
+<li><a href="https://www2.ncwu.edu.cn/jiaowu/info/1008/3014.htm">关于做好2027届本科毕业设计（论文）工作的通知</a></li>
+</ol>
+<h1>2027届本科毕业设计（]]>
+    </summary>
+    <title>27届毕业生总体说明</title>
+    <updated>2026-11-26T02:54:33.333Z</updated>
+  </entry>
   <entry>
     <author>
       <name>王海全</name>
@@ -388,7 +410,7 @@
     <category term="本科" scheme="http://drhanks91.github.io/tags/%E6%9C%AC%E7%A7%91/"/>
     <category term="毕业设计" scheme="http://drhanks91.github.io/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     <content>
-      <![CDATA[<h1>学生基本信息</h1><p>此处省略。</p><h1>毕业设计要求与规范</h1><p>下载<a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1_%E8%AE%BA%E6%96%87%E7%AE%A1%E7%90%86%E5%8A%9E%E6%B3%95.pdf">华北水利水电大学全日制本科生毕业设计（论文）管理办法</a>，此文件仅供参考，以官方文档和学校通知为准。</p><h2 id="撰写规范">撰写规范</h2><p><a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%EF%BC%88%E8%AE%BA%E6%96%87%EF%BC%89%E6%A0%BC%E5%BC%8F%E5%92%8C%E8%A6%81%E6%B1%82.doc">华北水利水电大学大学格式要求</a>，此文件仅供参考，以官方文档和学校通知为准。</p><h1>关键时节节点</h1><h1>完成选题</h1><p>2025-12-12号前，在<a href="https://co.gocheck.cn/">格子达</a>中完成填报。</p><table><thead><tr><th style="text-align:center">时间节点</th><th style="text-align:center">具体工作</th><th style="text-align:center">目前位置</th></tr></thead><tbody><tr><td style="text-align:center">2025年11月20日前(第13周)</td><td style="text-align:center">完成系统信息审核，学生账号激活工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2025年11月28日前(第14周)</td><td style="text-align:center">各学院组织完成选题发布工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2025年12月12日前(第16周)</td><td style="text-align:center">各学院组织学生完成选题工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2025年12月19日前(第17周)</td><td style="text-align:center">各学院组织教师下达任务书</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2026年1月9日前(第21周)</td><td style="text-align:center">各学院组织完成开题工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2026年4月15日前(第7周)</td><td style="text-align:center">各学院组织完成中期检查工作</td><td style="text-align:center"><strong>进行中</strong></td></tr><tr><td style="text-align:center">2026年6月5日前(第14周)</td><td style="text-align:center">各学院组织评阅及答辩工作</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">2026年6月5日</td><td style="text-align:center">录入毕业设计(论文)成绩</td><td style="text-align:center"></td></tr></tbody></table><h1>工具篇</h1><h2 id="撰写方式一">撰写方式一</h2><ol><li>Word+Endnote （推荐普通学生使用，说明与使用教程等待更新。）</li></ol><h2 id="撰写方式二">撰写方式二</h2><ol><li>LaTex+Jabref （推荐有志于硕博的学生使用，说明与使用教程等待更新。）</li></ol><h2 id="插图软件">插图软件</h2><p>Adobe Illustrator<a href="https://www.adobe.com/products/illustrator.html">官网</a><br>安装版本：adobe illustrator 2023, 27.3.1</p><h2 id="CAD制图软件">CAD制图软件</h2><p>AutoCAD Mechanical 2020 （注意是机械版本）</p><h2 id="GPT等生成文本">GPT等生成文本</h2><p>请仅用此类软件提供错误修改、句子润色等无关作弊、抄袭等写作规范问题场合使用。</p><ol><li><a href="https://claude.ai/recents">Claude</a></li><li><a href="https://chatgpt.com/">ChatGPT</a></li><li><a href="https://www.doubao.com/">豆包</a></li><li><a href="https://chat.qwen.ai/">千问</a></li><li><a href="https://chatlyai.app/">Gemini</a></li><li>其他等。</li></ol><h2 id="搜索引擎">搜索引擎</h2><ol><li>中文：百度、<a href="https://www.bing.com/?mkt=zh-CN">Bing</a></li><li>英文：<a href="https://www.google.com/">Google</a>、<a href="https://www.bing.com">Bing</a></li></ol>]]>
+      <![CDATA[<h1>学生基本信息</h1><p>此处省略。</p><h1>毕业设计要求与规范</h1><p>下载<a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1_%E8%AE%BA%E6%96%87%E7%AE%A1%E7%90%86%E5%8A%9E%E6%B3%95.pdf">华北水利水电大学全日制本科生毕业设计（论文）管理办法</a>，此文件仅供参考，以官方文档和学校通知为准。</p><h2 id="撰写规范">撰写规范</h2><p><a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%EF%BC%88%E8%AE%BA%E6%96%87%EF%BC%89%E6%A0%BC%E5%BC%8F%E5%92%8C%E8%A6%81%E6%B1%82.doc">华北水利水电大学大学格式要求</a>，此文件仅供参考，以官方文档和学校通知为准。</p><h1>关键时节节点</h1><h1>完成选题</h1><p>2025-12-12号前，在<a href="https://co.gocheck.cn/">格子达</a>中完成填报。</p><table><thead><tr><th style="text-align:center">时间节点</th><th style="text-align:center">具体工作</th><th style="text-align:center">目前位置</th></tr></thead><tbody><tr><td style="text-align:center">2025年11月20日前(第13周)</td><td style="text-align:center">完成系统信息审核，学生账号激活工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2025年11月28日前(第14周)</td><td style="text-align:center">各学院组织完成选题发布工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2025年12月12日前(第16周)</td><td style="text-align:center">各学院组织学生完成选题工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2025年12月19日前(第17周)</td><td style="text-align:center">各学院组织教师下达任务书</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2026年1月9日前(第21周)</td><td style="text-align:center">各学院组织完成开题工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2026年4月15日前(第7周)</td><td style="text-align:center">各学院组织完成中期检查工作</td><td style="text-align:center">完成</td></tr><tr><td style="text-align:center">2026年6月5日前(第14周)</td><td style="text-align:center">各学院组织评阅及答辩工作</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">2026年6月5日</td><td style="text-align:center">录入毕业设计(论文)成绩</td><td style="text-align:center"></td></tr></tbody></table><h1>工具篇</h1><h2 id="撰写方式一">撰写方式一</h2><ol><li>Word+Endnote （推荐普通学生使用，说明与使用教程等待更新。）</li></ol><h2 id="撰写方式二">撰写方式二</h2><ol><li>LaTex+Jabref （推荐有志于硕博的学生使用，说明与使用教程等待更新。）</li></ol><h2 id="插图软件">插图软件</h2><p>Adobe Illustrator<a href="https://www.adobe.com/products/illustrator.html">官网</a><br>安装版本：adobe illustrator 2023, 27.3.1</p><h2 id="CAD制图软件">CAD制图软件</h2><p>AutoCAD Mechanical 2020 （注意是机械版本）</p><h2 id="GPT等生成文本">GPT等生成文本</h2><p>请仅用此类软件提供错误修改、句子润色等无关作弊、抄袭等写作规范问题场合使用。</p><ol><li><a href="https://claude.ai/recents">Claude</a></li><li><a href="https://chatgpt.com/">ChatGPT</a></li><li><a href="https://www.doubao.com/">豆包</a></li><li><a href="https://chat.qwen.ai/">千问</a></li><li><a href="https://chatlyai.app/">Gemini</a></li><li>其他等。</li></ol><h2 id="搜索引擎">搜索引擎</h2><ol><li>中文：百度、<a href="https://www.bing.com/?mkt=zh-CN">Bing</a></li><li>英文：<a href="https://www.google.com/">Google</a>、<a href="https://www.bing.com">Bing</a></li></ol>]]>
     </content>
     <id>http://drhanks91.github.io/blog/20251205OverallProcess.html</id>
     <link href="http://drhanks91.github.io/blog/20251205OverallProcess.html"/>
@@ -400,6 +422,6 @@
 <p>下载<a href="../files/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1_%E8%AE%BA%E6%96%87%E7%AE%A1%E7%9]]>
     </summary>
     <title>本科毕业设计（论文）整体工作安排</title>
-    <updated>2026-01-10T13:27:04.000Z</updated>
+    <updated>2026-11-26T02:16:44.910Z</updated>
   </entry>
 </feed>
